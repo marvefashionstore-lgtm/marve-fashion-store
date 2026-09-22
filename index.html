@@ -1,164 +1,1022 @@
-/* =========================
-   MARVE FOOTER
-========================= */
+<!DOCTYPE html>
+<html lang="en">
 
-.marve-footer {
-  background: #111;
-  color: #fff;
-  padding: 50px 20px 0;
-  margin-top: 50px;
-}
+<head>
+  <meta charset="UTF-8">
 
-.footer-container {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr;
-  gap: 40px;
-}
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-.footer-column h2 {
-  font-size: 30px;
-  letter-spacing: 3px;
-  margin-bottom: 8px;
-}
+  <meta name="description"
+        content="MARVE Fashion Store - More Style, More You.">
 
-.footer-column h3,
-.footer-social h3,
-.footer-newsletter h3 {
-  margin-bottom: 18px;
-  font-size: 18px;
-}
+  <title>MARVE Fashion Store</title>
 
-.footer-column p {
-  color: #ccc;
-  line-height: 1.7;
-  font-size: 14px;
-}
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
 
-.footer-tagline {
-  color: #fff !important;
-  font-weight: 600;
-}
+</head>
 
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+<body>
 
-.footer-column ul li {
-  margin-bottom: 10px;
-}
+  <!-- =========================
+       TOP DELIVERY BAR
+  ========================== -->
 
-.footer-column a {
-  color: #ccc;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.footer-column a:hover {
-  color: #fff;
-}
-
-.footer-social {
-  max-width: 1200px;
-  margin: 40px auto 0;
-  padding-top: 30px;
-  border-top: 1px solid #333;
-  text-align: center;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.social-links a {
-  color: #fff;
-  text-decoration: none;
-  border: 1px solid #555;
-  padding: 8px 18px;
-  border-radius: 20px;
-  transition: 0.3s;
-}
-
-.social-links a:hover {
-  background: #fff;
-  color: #111;
-}
-
-.footer-newsletter {
-  max-width: 600px;
-  margin: 40px auto;
-  text-align: center;
-}
-
-.footer-newsletter p {
-  color: #aaa;
-}
-
-.footer-newsletter form {
-  display: flex;
-  margin-top: 20px;
-}
-
-.footer-newsletter input {
-  flex: 1;
-  padding: 13px;
-  border: none;
-  outline: none;
-  border-radius: 5px 0 0 5px;
-}
-
-.footer-newsletter button {
-  padding: 13px 20px;
-  border: none;
-  background: #fff;
-  color: #111;
-  font-weight: 600;
-  cursor: pointer;
-  border-radius: 0 5px 5px 0;
-}
-
-.footer-bottom {
-  border-top: 1px solid #333;
-  margin-top: 30px;
-  padding: 20px 10px;
-  text-align: center;
-  color: #888;
-  font-size: 13px;
-}
-
-.footer-bottom p {
-  margin: 5px 0;
-}
+  <div class="top-bar">
+    🚚 Free Delivery on Orders Over ৳2,000
+  </div>
 
 
-/* Mobile Responsive */
+  <!-- =========================
+       HEADER
+  ========================== -->
 
-@media (max-width: 768px) {
+  <header class="main-header">
 
-  .footer-container {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
+    <div class="header-container">
 
-  .marve-footer {
-    padding: 40px 20px 0;
-  }
+      <!-- Menu -->
+      <button class="menu-btn"
+              id="menuBtn"
+              aria-label="Open Menu">
+        ☰
+      </button>
 
-  .footer-newsletter form {
-    flex-direction: column;
-    gap: 10px;
-  }
 
-  .footer-newsletter input,
-  .footer-newsletter button {
-    width: 100%;
-    border-radius: 5px;
-  }
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        MARVE
+      </a>
 
-}
+
+      <!-- Header Icons -->
+      <div class="header-icons">
+
+        <button type="button"
+                aria-label="Search"
+                id="searchBtn">
+          🔍
+        </button>
+
+        <a href="#account"
+           aria-label="Account">
+          👤
+        </a>
+
+        <a href="#wishlist"
+           aria-label="Wishlist">
+          ♡
+        </a>
+
+        <button type="button"
+                aria-label="Cart"
+                id="cartBtn">
+          🛒
+          <span id="cartCount">0</span>
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         MOBILE MENU
+    ========================== -->
+
+    <nav class="mobile-menu"
+         id="mobileMenu">
+
+      <button class="close-menu"
+              id="closeMenu">
+        ✕
+      </button>
+
+      <a href="index.html">Home</a>
+
+      <a href="#shop">Shop</a>
+
+      <a href="#categories">Categories</a>
+
+      <a href="#offers">Offers</a>
+
+      <a href="#about">About Us</a>
+
+      <a href="#contact">Contact</a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =========================
+       SEARCH AREA
+  ========================== -->
+
+  <section class="search-section"
+           id="searchSection">
+
+    <div class="search-box">
+
+      <input
+        type="search"
+        id="searchInput"
+        placeholder="Search products..."
+        autocomplete="off"
+      >
+
+      <button type="button"
+              id="searchSubmit">
+        Search
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       HERO SECTION
+  ========================== -->
+
+  <main>
+
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <p class="hero-brand">
+          MARVE
+        </p>
+
+        <h1>
+          More Style<br>
+          More You
+        </h1>
+
+        <p>
+          Style That Defines You
+        </p>
+
+        <a href="#shop"
+           class="hero-btn">
+          Shop Now
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICES / TRUST
+    ========================== -->
+
+    <section class="services">
+
+      <div class="service-item">
+        <div class="service-icon">✓</div>
+        <h3>100% Authentic</h3>
+        <p>Genuine Products</p>
+      </div>
+
+      <div class="service-item">
+        <div class="service-icon">৳</div>
+        <h3>Cash on Delivery</h3>
+        <p>Pay When You Receive</p>
+      </div>
+
+      <div class="service-item">
+        <div class="service-icon">🚚</div>
+        <h3>Fast Delivery</h3>
+        <p>Quick & Secure Delivery</p>
+      </div>
+
+      <div class="service-item">
+        <div class="service-icon">↻</div>
+        <h3>Easy Returns</h3>
+        <p>Simple Return Policy</p>
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CATEGORIES
+    ========================== -->
+
+    <section class="categories"
+             id="categories">
+
+      <div class="section-title">
+
+        <p>EXPLORE</p>
+
+        <h2>
+          Shop by Category
+        </h2>
+
+      </div>
+
+
+      <div class="category-grid">
+
+        <a href="#shop"
+           class="category-card">
+
+          <div class="category-image">
+            💎
+          </div>
+
+          <h3>
+            Jewellery
+          </h3>
+
+          <span>
+            Shop Now →
+          </span>
+
+        </a>
+
+
+        <a href="#shop"
+           class="category-card">
+
+          <div class="category-image">
+            ⌚
+          </div>
+
+          <h3>
+            Watches
+          </h3>
+
+          <span>
+            Shop Now →
+          </span>
+
+        </a>
+
+
+        <a href="#shop"
+           class="category-card">
+
+          <div class="category-image">
+            👜
+          </div>
+
+          <h3>
+            Bags
+          </h3>
+
+          <span>
+            Shop Now →
+          </span>
+
+        </a>
+
+
+        <a href="#shop"
+           class="category-card">
+
+          <div class="category-image">
+            🕶️
+          </div>
+
+          <h3>
+            Sunglasses
+          </h3>
+
+          <span>
+            Shop Now →
+          </span>
+
+        </a>
+
+
+        <a href="#shop"
+           class="category-card">
+
+          <div class="category-image">
+            ✨
+          </div>
+
+          <h3>
+            Accessories
+          </h3>
+
+          <span>
+            Shop Now →
+          </span>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SHOP
+    ========================== -->
+
+    <section class="shop-section"
+             id="shop">
+
+      <div class="section-title">
+
+        <p>MARVE COLLECTION</p>
+
+        <h2>
+          Featured Products
+        </h2>
+
+      </div>
+
+
+      <div class="product-grid">
+
+        <article class="product-card">
+
+          <div class="product-image">
+            💎
+          </div>
+
+          <div class="product-info">
+
+            <p class="product-category">
+              Jewellery
+            </p>
+
+            <h3>
+              Elegant Jewellery
+            </h3>
+
+            <p class="price">
+              ৳1,250
+            </p>
+
+            <button class="add-cart"
+                    data-product="Elegant Jewellery"
+                    data-price="1250">
+
+              Add to Cart
+
+            </button>
+
+          </div>
+
+        </article>
+
+
+        <article class="product-card">
+
+          <div class="product-image">
+            ⌚
+          </div>
+
+          <div class="product-info">
+
+            <p class="product-category">
+              Watches
+            </p>
+
+            <h3>
+              Classic Watch
+            </h3>
+
+            <p class="price">
+              ৳1,850
+            </p>
+
+            <button class="add-cart"
+                    data-product="Classic Watch"
+                    data-price="1850">
+
+              Add to Cart
+
+            </button>
+
+          </div>
+
+        </article>
+
+
+        <article class="product-card">
+
+          <div class="product-image">
+            👜
+          </div>
+
+          <div class="product-info">
+
+            <p class="product-category">
+              Bags
+            </p>
+
+            <h3>
+              Premium Fashion Bag
+            </h3>
+
+            <p class="price">
+              ৳1,650
+            </p>
+
+            <button class="add-cart"
+                    data-product="Premium Fashion Bag"
+                    data-price="1650">
+
+              Add to Cart
+
+            </button>
+
+          </div>
+
+        </article>
+
+
+        <article class="product-card">
+
+          <div class="product-image">
+            🕶️
+          </div>
+
+          <div class="product-info">
+
+            <p class="product-category">
+              Sunglasses
+            </p>
+
+            <h3>
+              Premium Sunglasses
+            </h3>
+
+            <p class="price">
+              ৳950
+            </p>
+
+            <button class="add-cart"
+                    data-product="Premium Sunglasses"
+                    data-price="950">
+
+              Add to Cart
+
+            </button>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section class="about-section"
+             id="about">
+
+      <div class="section-title">
+
+        <p>ABOUT MARVE</p>
+
+        <h2>
+          Style That Defines You
+        </h2>
+
+      </div>
+
+      <div class="about-content">
+
+        <p>
+          MARVE Fashion Store brings you stylish,
+          elegant and quality fashion products
+          for your everyday lifestyle.
+        </p>
+
+        <p>
+          Our collection includes jewellery,
+          watches, bags, sunglasses and accessories
+          carefully selected for modern fashion lovers.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         REVIEW
+    ========================== -->
+
+    <section class="review-section">
+
+      <div class="section-title">
+
+        <p>CUSTOMER REVIEW</p>
+
+        <h2>
+          What Our Customer Says
+        </h2>
+
+      </div>
+
+
+      <div class="review-card">
+
+        <div class="stars">
+          ★★★★★
+        </div>
+
+        <p>
+          "Amazing quality and beautiful products.
+          The delivery was fast and the packaging
+          was very nice."
+        </p>
+
+        <h3>
+          Rafid Islam
+        </h3>
+
+        <span>
+          Sylhet, Bangladesh
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         OFFERS
+    ========================== -->
+
+    <section class="offer-section"
+             id="offers">
+
+      <div class="offer-content">
+
+        <p>
+          SPECIAL OFFER
+        </p>
+
+        <h2>
+          More Style, More You
+        </h2>
+
+        <p>
+          Enjoy free delivery on orders over
+          ৳2,000.
+        </p>
+
+        <a href="#shop"
+           class="hero-btn">
+          Shop Now
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="marve-footer"
+          id="contact">
+
+    <div class="footer-container">
+
+
+      <!-- MARVE -->
+      <div class="footer-column">
+
+        <h2 class="footer-logo">
+          MARVE
+        </h2>
+
+        <p class="footer-tagline">
+          More Style, More You.
+        </p>
+
+        <p>
+          Discover elegant fashion, jewellery,
+          watches and accessories designed to
+          define your unique style.
+        </p>
+
+      </div>
+
+
+      <!-- QUICK LINKS -->
+      <div class="footer-column">
+
+        <h3>
+          Quick Links
+        </h3>
+
+        <ul>
+
+          <li>
+            <a href="index.html">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="#shop">
+              Shop
+            </a>
+          </li>
+
+          <li>
+            <a href="#categories">
+              Categories
+            </a>
+          </li>
+
+          <li>
+            <a href="#offers">
+              Offers
+            </a>
+          </li>
+
+          <li>
+            <a href="#about">
+              About Us
+            </a>
+          </li>
+
+          <li>
+            <a href="#contact">
+              Contact
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- CATEGORIES -->
+      <div class="footer-column">
+
+        <h3>
+          Categories
+        </h3>
+
+        <ul>
+
+          <li>
+            <a href="#shop">
+              Jewellery
+            </a>
+          </li>
+
+          <li>
+            <a href="#shop">
+              Watches
+            </a>
+          </li>
+
+          <li>
+            <a href="#shop">
+              Bags
+            </a>
+          </li>
+
+          <li>
+            <a href="#shop">
+              Sunglasses
+            </a>
+          </li>
+
+          <li>
+            <a href="#shop">
+              Accessories
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- CONTACT -->
+      <div class="footer-column">
+
+        <h3>
+          Contact MARVE
+        </h3>
+
+
+        <p>
+
+          <strong>
+            📞 Phone:
+          </strong>
+
+          <br>
+
+          <a href="tel:+8801314576664">
+            01314-576664
+          </a>
+
+        </p>
+
+
+        <p>
+
+          <strong>
+            ✉️ Email:
+          </strong>
+
+          <br>
+
+          <a href="mailto:marvefashionstore@gmail.com">
+            marvefashionstore@gmail.com
+          </a>
+
+        </p>
+
+
+        <p>
+
+          <strong>
+            📍 Address:
+          </strong>
+
+          <br>
+
+          Dhaka, Bangladesh
+
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         SOCIAL MEDIA
+    ========================== -->
+
+    <div class="footer-social">
+
+      <h3>
+        Follow MARVE
+      </h3>
+
+      <div class="social-links">
+
+        <a href="#"
+           aria-label="Facebook">
+          Facebook
+        </a>
+
+        <a href="#"
+           aria-label="Instagram">
+          Instagram
+        </a>
+
+        <a href="#"
+           aria-label="TikTok">
+          TikTok
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         NEWSLETTER
+    ========================== -->
+
+    <div class="footer-newsletter">
+
+      <h3>
+        Stay Updated
+      </h3>
+
+      <p>
+        Subscribe to get the latest MARVE
+        collections, offers and updates.
+      </p>
+
+
+      <form id="newsletterForm">
+
+        <input
+          type="email"
+          placeholder="Enter your email address"
+          required
+        >
+
+        <button type="submit">
+          Subscribe
+        </button>
+
+      </form>
+
+    </div>
+
+
+    <!-- =========================
+         COPYRIGHT
+    ========================== -->
+
+    <div class="footer-bottom">
+
+      <p>
+        © 2026 MARVE Fashion Store.
+        All Rights Reserved.
+      </p>
+
+      <p>
+        Made with ❤️ for Fashion Lovers
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       CART DRAWER
+  ========================== -->
+
+  <div class="cart-drawer"
+       id="cartDrawer">
+
+    <div class="cart-header">
+
+      <h2>
+        Your Cart
+      </h2>
+
+      <button id="closeCart">
+        ✕
+      </button>
+
+    </div>
+
+
+    <div id="cartItems"
+         class="cart-items">
+
+      <p>
+        Your cart is empty.
+      </p>
+
+    </div>
+
+
+    <div class="cart-summary">
+
+      <p>
+        Subtotal:
+        <strong>
+          ৳<span id="cartTotal">0</span>
+        </strong>
+      </p>
+
+      <button class="checkout-btn"
+              id="checkoutBtn">
+
+        Checkout
+
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       OVERLAY
+  ========================== -->
+
+  <div class="page-overlay"
+       id="pageOverlay">
+  </div>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script src="script.js" defer></script>
+
+
+  <!-- Small Menu Script -->
+  <script>
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      function () {
+
+        const menuBtn =
+          document.getElementById("menuBtn");
+
+        const closeMenu =
+          document.getElementById("closeMenu");
+
+        const mobileMenu =
+          document.getElementById("mobileMenu");
+
+        const overlay =
+          document.getElementById("pageOverlay");
+
+
+        if (menuBtn && mobileMenu) {
+
+          menuBtn.addEventListener(
+            "click",
+            function () {
+
+              mobileMenu.classList.add("active");
+
+              if (overlay) {
+                overlay.classList.add("active");
+              }
+
+            }
+          );
+
+        }
+
+
+        if (closeMenu && mobileMenu) {
+
+          closeMenu.addEventListener(
+            "click",
+            function () {
+
+              mobileMenu.classList.remove("active");
+
+              if (overlay) {
+                overlay.classList.remove("active");
+              }
+
+            }
+          );
+
+        }
+
+
+        if (overlay) {
+
+          overlay.addEventListener(
+            "click",
+            function () {
+
+              mobileMenu.classList.remove("active");
+
+              overlay.classList.remove("active");
+
+            }
+          );
+
+        }
+
+
+        /* Newsletter */
+
+        const newsletter =
+          document.getElementById(
+            "newsletterForm"
+          );
+
+        if (newsletter) {
+
+          newsletter.addEventListener(
+            "submit",
+            function (e) {
+
+              e.preventDefault();
+
+              alert(
+                "Thank you for subscribing to MARVE!"
+              );
+
+            }
+          );
+
+        }
+
+      }
+
+    );
+
+  </script>
+
+</body>
+
+                              </html>
