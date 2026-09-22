@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MARVE — Style That Defines You</title>
+<meta name="description" content="MARVE — Jewellery, Watches, Bags, Sunglasses & Accessories. Genuine products, Cash on Delivery across Bangladesh.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="announcement">
+  <div>🚚 ৳2,000+ অর্ডারে <b>FREE DELIVERY</b></div>
+  <div class="announcement-center">✦ Genuine Products &nbsp; | &nbsp; 🔒 Safe Shopping &nbsp; | &nbsp; 💵 Cash on Delivery</div>
+  <div>Dhaka • Bangladesh</div>
+</div>
+
+<header class="header">
+  <button class="mobile-menu" onclick="toggleMenu()">☰</button>
+  <a class="logo" href="#home">
+    <div class="logo-crown">♛</div>
+    <div class="logo-name">MARVE</div>
+    <div class="logo-sub">FASHION STORE</div>
+  </a>
+  <nav id="nav">
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#categories">Categories</a>
+    <a href="#offers">Offers</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="header-tools">
+    <div class="search"><input id="search" placeholder="Search products..." onkeydown="if(event.key==='Enter') searchProducts()"><button onclick="searchProducts()">⌕</button></div>
+    <button onclick="openAccount()" aria-label="Account">♙</button>
+    <button onclick="openWishlist()" class="counter-btn">♡<span id="wishCount">0</span></button>
+    <button onclick="openCart()" class="counter-btn">🛒<span id="cartCount">0</span></button>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="hero-photo"></div>
+  <div class="hero-shade"></div>
+  <div class="hero-content">
+    <div class="hero-side">More<br>Style<br>More<br>You ♡</div>
+    <div class="hero-main">
+      <div class="mini-crown">♛</div>
+      <h1>MARVE</h1>
+      <div class="hero-tagline">Style That Defines You</div>
+      <p>Jewellery <i>|</i> Watches <i>|</i> Bags <i>|</i> Sunglasses <i>|</i> Accessories</p>
+      <button class="primary" onclick="document.querySelector('#shop').scrollIntoView({behavior:'smooth'})">SHOP NOW <span>→</span></button>
+    </div>
+  </div>
+</section>
+
+<section class="trust-strip">
+  <div>✓ <b>100% Authentic</b><small>Genuine Products</small></div>
+  <div>▣ <b>Cash on Delivery</b><small>Pay After You Receive</small></div>
+  <div>🚚 <b>Fast Delivery</b><small>Across Bangladesh</small></div>
+  <div>↻ <b>Easy Returns</b><small>Hassle Free Policy</small></div>
+</section>
+
+<section class="section" id="categories">
+  <div class="section-heading centered"><span></span><h2>SHOP BY CATEGORY</h2><span></span><p>Find your favorite style</p></div>
+  <div class="category-grid">
+    <button onclick="filterCategory('Jewellery')"><img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=90"><strong>Jewellery</strong><small>Shop Now →</small></button>
+    <button onclick="filterCategory('Watches')"><img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=900&q=90"><strong>Watches</strong><small>Shop Now →</small></button>
+    <button onclick="filterCategory('Bags')"><img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=90"><strong>Bags</strong><small>Shop Now →</small></button>
+    <button onclick="filterCategory('Sunglasses')"><img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=900&q=90"><strong>Sunglasses</strong><small>Shop Now →</small></button>
+    <button onclick="filterCategory('Accessories')"><img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=90"><strong>Accessories</strong><small>Shop Now →</small></button>
+  </div>
+</section>
+
+<section class="section shop" id="shop">
+  <div class="section-heading">
+    <div><h2>BEST SELLERS <em></em></h2><p>MARVE customers' most loved styles</p></div>
+    <button class="text-btn" onclick="renderProducts(products)">View All →</button>
+  </div>
+  <div class="filter-row">
+    <button class="active" onclick="filterCategory('All',this)">All</button>
+    <button onclick="filterCategory('Jewellery',this)">Jewellery</button>
+    <button onclick="filterCategory('Watches',this)">Watches</button>
+    <button onclick="filterCategory('Bags',this)">Bags</button>
+    <button onclick="filterCategory('Sunglasses',this)">Sunglasses</button>
+    <button onclick="filterCategory('Accessories',this)">Accessories</button>
+  </div>
+  <div class="product-grid" id="productGrid"></div>
+</section>
+
+<section class="offers" id="offers">
+  <div class="offer offer-one">
+    <div><small>Special Offer</small><h2>UP TO 25% OFF</h2><p>On Selected Jewellery</p><button onclick="filterCategory('Jewellery')">SHOP NOW →</button></div>
+  </div>
+  <div class="offer offer-two">
+    <div><small>Premium Collection</small><h2>TIMELESS ELEGANCE</h2><p>Stylish Watches for Every Moment</p><button onclick="filterCategory('Watches')">SHOP NOW →</button></div>
+  </div>
+</section>
+
+<section class="about section" id="about">
+  <div class="about-image"></div>
+  <div class="about-copy">
+    <p class="eyebrow">WELCOME TO MARVE</p>
+    <h2>Style That Defines You.</h2>
+    <p>MARVE brings together elegant jewellery, watches, bags, sunglasses and accessories for everyday style and special moments.</p>
+    <p>আমাদের লক্ষ্য—ভালো মানের ফ্যাশন প্রোডাক্ট সহজে ও নিরাপদে আপনার হাতে পৌঁছে দেওয়া।</p>
+    <button class="outline" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">CONTACT MARVE →</button>
+  </div>
+</section>
+
+<section class="reviews section">
+  <div class="section-heading centered"><h2>WHAT OUR CUSTOMERS SAY</h2><p>Real stories, real style</p></div>
+  <div class="review-grid">
+    <article><div class="avatar">T</div><div><b>★★★★★</b><strong>Tasmia Rahman</strong><small>Dhaka</small><p>“Beautiful design and very nice finishing. The product looked even better in real life.”</p></div></article>
+    <article><div class="avatar">N</div><div><b>★★★★★</b><strong>Nusrat Jahan</strong><small>Chattogram</small><p>“Fast delivery and smooth communication. I loved my MARVE order.”</p></div></article>
+    <article><div class="avatar">R</div><div><b>★★★★★</b><strong>Rafid Islam</strong><small>Sylhet</small><p>“The watch was exactly what I expected. Premium look and good packaging.”</p></div></article>
+  </div>
+</section>
+</main>
+
+<footer id="contact">
+  <div class="footer-main">
+    <div class="footer-brand"><div class="logo-crown">♛</div><div class="logo-name">MARVE</div><div class="logo-sub">FASHION STORE</div><p>Style That Defines You.</p></div>
+    <div><h4>QUICK LINKS</h4><a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About Us</a><a href="#contact">Contact</a></div>
+    <div><h4>CATEGORIES</h4><a href="#shop">Jewellery</a><a href="#shop">Watches</a><a href="#shop">Bags</a><a href="#shop">Sunglasses</a><a href="#shop">Accessories</a></div>
+    <div><h4>CONTACT</h4><p>☎ +880 1712 345678</p><p>✉ marve.fashion@gmail.com</p><p>⌖ Dhaka, Bangladesh</p><a class="whatsapp" href="https://wa.me/8801712345678" target="_blank">◉ Chat on WhatsApp</a></div>
+    <div><h4>FOLLOW MARVE</h4><p class="social">f &nbsp; ◎ &nbsp; ◉ &nbsp; ▶</p><p>Subscribe to our newsletter</p><div class="newsletter"><input id="email" placeholder="Your email"><button onclick="subscribe()">→</button></div></div>
+  </div>
+  <div class="footer-bottom">© 2026 MARVE Fashion Store. All rights reserved. <span>Privacy Policy &nbsp; | &nbsp; Terms & Conditions</span></div>
+</footer>
+
+<div class="modal" id="cartModal">
+  <div class="modal-box"><button class="close" onclick="closeModal('cartModal')">×</button><h2>Your MARVE Cart</h2><div id="cartItems"></div><div class="cart-total" id="cartTotal"></div><button class="primary full" onclick="checkout()">ORDER VIA WHATSAPP →</button></div>
+</div>
+<div class="modal" id="accountModal"><div class="modal-box small"><button class="close" onclick="closeModal('accountModal')">×</button><h2>MARVE Account</h2><p>Account login can be connected to your preferred e-commerce system later.</p><button class="outline full" onclick="closeModal('accountModal')">CONTINUE SHOPPING</button></div></div>
+<div class="modal" id="wishModal"><div class="modal-box small"><button class="close" onclick="closeModal('wishModal')">×</button><h2>Wishlist</h2><p id="wishText">Your wishlist is empty.</p><button class="outline full" onclick="closeModal('wishModal')">CONTINUE SHOPPING</button></div></div>
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
